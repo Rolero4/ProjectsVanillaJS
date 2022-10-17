@@ -1,0 +1,132 @@
+html{
+    scroll-behavior: smooth;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: aliceblue;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    box-shadow: -10px 1px 10px 10px rgb(0, 0, 0, 0.3);
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+ul li{
+    margin: 0 20px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+ul li a:hover{
+    color: royalblue;
+    transition: all 0.5s;
+}
+
+
+.toggle-button{
+    box-sizing: border-box;
+    margin: 30px 20px;
+    padding: 5px;
+    width: 40px;
+    background-color: transparent;
+    border: 0;
+    color: royalblue;
+    font-weight: bold;
+    font-size: 3rem;
+    float: right;
+}
+
+.toggle-button:hover{
+    color: skyblue;
+    rotate: 90deg;
+    transition: color 0.3s;
+    transition: rotate 0.7s;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    background: aliceblue;
+    display: grid;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    transform: translate(-100%);
+}
+
+.show-sidebar{
+    transform: translate(0%);
+}
+
+.sidebar-header{
+    display: flex;
+    justify-content:space-between   ;
+    align-items: center;
+}
+
+.logo{
+    max-width: 60px;
+    margin: 20px;
+}
+
+
+.close-button{
+    float: right;
+    box-sizing: border-box;
+    margin: 0 20px;
+    padding: 5px;
+    width: 40px;
+    background-color: transparent;
+    border: 0;
+    color: crimson;
+    font-weight: bold;
+    font-size: 3rem;
+    float: right;
+}
+
+.close-button:hover{
+    color: red;
+    rotate: 270deg;
+    transition: color 0.3s;
+    transition: rotate 1.5s;
+}
+
+@media screen and (min-width: 676px) {
+    .sidebar{
+        width: 400px;
+    }
+}

@@ -1,0 +1,112 @@
+:root{
+    box-sizing: border-box;
+}
+
+*, ::after, ::before{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: rgb(220, 229, 241);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title{
+    margin: 80px auto 20px;
+    text-align: center;
+}
+
+.title h2{
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+.title .underline{
+    border-top: 5px solid goldenrod;
+    border-radius: 20px;
+    width: 100px;
+    margin: 10px auto;
+}
+
+.food-type-container{
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn{
+    cursor: pointer;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    background-color: transparent;
+    color: goldenrod;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.btn:hover{
+    background-color: goldenrod;
+    color: white;
+    transition: all 0.5s;
+}
+
+.food-type-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-center{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: row;
+    max-width: 550px;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 10px;
+}
+
+.photo{
+    object-fit:cover;
+    object-position: center center;
+    width: 250px;
+    height: 150px;
+    border: 0.25rem solid goldenrod;
+    border-radius: 0.5rem;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.item-info{
+    width: 300px;
+}
+
+.item-info header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted grey;
+}
+
+.item-info h4 {
+    margin-bottom: 0.5rem;
+}
+
+.price{
+    color: goldenrod;
+}
+
+.item-text {
+    margin-bottom: 0;
+    padding-top: 5px;
+    color: rgb(139, 189, 233);
+}

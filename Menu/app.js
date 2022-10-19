@@ -79,11 +79,38 @@ const menu = [
       img: "./images/item-10.jpeg",
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
-  ];
+];
 
-let sectionCenter = document.querySelector('.section-center');
-window.addEventListener('DOMContentLoaded', function(){
-    let displayMenu = menu.map(function(item){
+
+ window.onload =  function(){
+  const sectionCenter = document.querySelector('.section-center');
+  displayMenuItems(menu, sectionCenter);
+
+  const btns = document.querySelectorAll('.btn');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter(function(menuItem){
+          if(menuItem.category === category){
+            return menuItem;
+          }
+      });
+      if(category === 'all'){
+        displayMenuItems(menu, sectionCenter);
+      } else {
+        displayMenuItems(menuCategory, sectionCenter);
+      }
+    })
+  });
+};
+
+
+
+
+
+
+function displayMenuItems(menuItems, section){
+    let displayMenu = menuItems.map(function(item){
         return `<article class="menu-item">
         <img src=${item.img} alt=${item.title} class="photo" />
         <div class="item-info">
@@ -100,5 +127,5 @@ window.addEventListener('DOMContentLoaded', function(){
     displayMenu = displayMenu.join("");
     // console.log(displayMenu);
 
-    sectionCenter.innerHTML = displayMenu;
-});
+    section.innerHTML = displayMenu;
+};

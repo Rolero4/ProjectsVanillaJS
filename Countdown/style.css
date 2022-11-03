@@ -1,0 +1,101 @@
+:root{
+    box-sizing: border-box;
+}
+
+*, ::after, ::before{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: space-evenly;
+}
+
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.title p{
+    font-size: 1.2rem;
+    color: lightblue;
+}
+
+.container{
+    margin-top: 10px;
+    width: 500px;
+}
+
+img{
+    max-width: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+
+h3{
+    font-size: 1.75rem;
+    padding: 1rem;
+    margin: 1rem 5px;
+}
+
+h4{
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem 5px;
+}
+
+p{
+    font-size: 0.85rem;
+    padding: 1rem;
+    margin: 1rem 5px;
+}
+
+
+.section-center{
+    max-width: 1020px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+
+
+
+.deadline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.deadline-format{
+    background: darkslateblue;
+    color: white;
+    margin: 1rem;
+    width: 5rem;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.deadline-format h4{
+    font-size: 2rem;
+    padding: 0;
+}
+
+
+.deadline-format span {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-top: -12px;
+  }
